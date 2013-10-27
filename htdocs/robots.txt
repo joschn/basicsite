@@ -1,0 +1,38 @@
+# www.domaintools.com
+User-agent: SurveyBot
+Disallow: /
+
+# http://websitewiki.de/WebsiteWiki
+User-agent: WebsiteWiki
+Disallow: /
+
+# http://www.shopwiki.de/
+User-agent: ShopWiki
+Disallow: /
+
+User-agent: Jakarta Commons-HttpClient
+Disallow: /
+
+# http://www.aboutus.org
+User-Agent: AboutUsBot 
+Disallow: /
+
+# http://bizinformation.org/de/
+User-agent: BizInformation
+Disallow: /
+
+# http://www.semager.de/
+User-agent: Semager
+Disallow: /
+
+# http://www.linguee.com/bot
+User-agent: Linguee
+Disallow: /
+
+# http://www.suchen.de. 
+User-agent: gonzo 
+Disallow: /
+
+# www.ulysseek.com
+User-agent: Zeusbot
+Disallow: /

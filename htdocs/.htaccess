@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+
+## REWRITE DEFAULTS
+RewriteEngine On
+RewriteBase /
+
+Options +SymLinksIfOwnerMatch
+
+## REQUIRE SUBDOMAIN
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\.mydomain\.net$ [NC]
+RewriteRule ^/(.*)$ http://www.mydomain.net/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^mydomain.net
+RewriteRule (.*) http://www.mydomain.net/$1 [R=301,L]
+
+#RewriteCond %{REQUEST_URI} !^/(downloads|img).*$
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?urlPath=$1 [L]
+
+</IfModule>
