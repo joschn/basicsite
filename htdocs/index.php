@@ -19,6 +19,9 @@ else
 	$GLOBALS['basedir']     = 'http://www.mydomain.net/'; // var_dump($GLOBALS['basedir']);
 }
 
+if( !strpos( $GLOBALS['canonical_domain'], $_SERVER['SERVER_NAME'] ) )
+	die( 'SERVER_NAME is <b>'.$_SERVER['SERVER_NAME'].'</b>, but should be a part of <b>'.$GLOBALS['basedir'].'</b>. You may create a vhost.' );
+
 
 
 /**
