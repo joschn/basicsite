@@ -13,6 +13,11 @@ if( $_SERVER['SERVER_NAME'] == "basicsite.dev" )
 	$GLOBALS['urlrewrite']  = 1; // Angeben, ob URL-Rewriting an oder aus ist.
 	$GLOBALS['basedir']     = 'http://basicsite.dev/'; // var_dump($GLOBALS['basedir']);
 }
+elseif( $_SERVER['SERVER_NAME'] == "mystage.net" )
+{
+	$GLOBALS['urlrewrite']  = 0;
+	$GLOBALS['basedir']     = 'http://mystage.net/customer/project/';
+}
 else
 {
 	$GLOBALS['urlrewrite']  = 1; // Angeben, ob URL-Rewriting an oder aus ist.
@@ -104,7 +109,7 @@ $page_placeholders['scripts']     = "";
 $page_placeholders['navi_main']     = $nObj->get('main', $navi, $pages, 'nav-main');
 $page_placeholders['navi_meta']      = $nObj->get('meta', $navi, $pages);
 $page_placeholders['navi_service']   = $nObj->get('service', $navi, $pages);
-
+$page_placeholders['title']          = $pages[$id]['name'];
 
 /**
  Seiten-Body generieren
